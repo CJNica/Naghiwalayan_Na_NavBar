@@ -1,0 +1,318 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', 'Roboto', 'Oxygen', sans-serif;
+    background-color: #f5f5f5;
+}
+
+.portfolio-container {
+    display: flex;
+    height: 100vh;
+}
+
+.image-section {
+    flex: 1;
+    background-color: #000000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    color: white;
+    text-align: center;
+    padding-bottom: 10%;
+}
+
+.portfolio-image {
+    width: 220px;
+    height: 220px;
+    border-radius: 10%;
+    box-shadow: 0px 0px 15px rgba(255, 255, 0, 0.7);
+    object-fit: cover;
+    transition: 0.3s ease-in-out;
+}
+
+.typing-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    overflow: hidden;
+    border-right: 3px solid yellow;
+    white-space: nowrap;
+    display: inline-block;
+    width: 0;
+    animation: typing 2s steps(40, end) infinite, blink 0.7s infinite;
+}
+
+@keyframes typing {
+    0% { width: 0 }
+    100% { width: 100% }
+}
+
+@keyframes blink {
+    50% { border-color: transparent }
+}
+
+.content-section {
+    flex: 2;
+    padding: 40px;
+    background: rgb(46, 46, 46);
+}
+
+.header {
+    width: 100%;
+    background-color: #222;
+    padding: 15px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.nav-container ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin-left: 10%;
+}
+
+.nav-container ul li {
+    margin: 15px;
+    position: relative;
+}
+
+.nav-container ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-container ul li a:hover {
+    color: yellow;
+    text-shadow: 0px 0px 10px yellow;
+}
+
+.nav-container ul li a.active {
+    border-bottom: 3px solid yellow;
+}
+
+.main-content {
+    text-align: center;
+}
+
+.main-content h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #222;
+}
+
+.main-content p {
+    font-size: 18px;
+    max-width: 80%;
+    margin: 20px auto;
+    color: #555;
+}
+
+.button-container {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.button-container button:first-child {
+    background-color: black;
+    color: white;
+    padding: 12px 24px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+.button-container button:first-child:hover {
+    box-shadow: 0px 0px 15px yellow;
+}
+
+.button-container button:last-child {
+    background-color: gray;
+    color: white;
+    padding: 12px 24px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+.button-container button:last-child:hover {
+    box-shadow: 0px 0px 15px rgb(248, 223, 0);
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    color: #777;
+}
+.contact-container input {
+    width: 50%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #e0e0e0;
+    color: #000000;
+}
+.contact-container textarea {
+    width: 20%;
+    padding: 20px;
+    margin-bottom: 15px;
+    border: none;
+    padding-right: 75%;
+    align-content: center;
+    border-radius: 5px;
+    background-color: #e0e0e0;
+    color: #000000;
+}
+.contact-container button{
+    width: 10%;
+    height: 60px;
+    background-color: #000000;
+    border-radius: 5px;
+    color: rgb(139, 138, 138);
+    padding: 12px 24px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    
+}
+
+.projects-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    padding: 20px;
+    width: 100%;
+    overflow-y: scroll; 
+    max-height: 65vh; 
+    scrollbar-width: thin; 
+}
+
+.project-box {
+    background-color: #222;
+    padding: 25px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px rgba(255, 255, 0, 0.5);
+    width: 95%;
+    max-width: 600px;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.projects-grid::-webkit-scrollbar {
+    width: 6px;
+}
+
+.projects-grid::-webkit-scrollbar-thumb {
+    background: yellow;
+    border-radius: 8px;
+}
+
+.projects-grid::-webkit-scrollbar-track {
+    background: rgba(255, 255, 0, 0.1);
+}
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    padding: 20px;
+    width: 100%;
+    overflow-y: scroll;
+    max-height: 65vh;
+    scrollbar-width: thin;
+}
+
+.project-box {
+    background-color: #222;
+    padding: 150px;
+    padding-top: 30px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px rgba(255, 255, 0, 0.5);
+    width: 40%;
+    max-width: 600px;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project-box h3 {
+    color: white;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.project-box a {
+    text-decoration: none;
+    display: block; 
+    margin-bottom: 15px;
+}
+
+.project-box button {
+    background-color: yellow;
+    color: black;
+    padding: 12px 22px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s ease-in-out;
+}
+body {
+    overflow: auto;
+  }
+  
+  
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  
+
+.project-box button:hover {
+    box-shadow: 0px 0px 15px yellow;
+    transform: scale(1.05);
+}
+
+
+.project-box iframe {
+    width: 180%;
+    height: 250px;
+    border-radius: 8px;
+    border: 2px solid #ccc;
+}
+.nav-container {
+    display: flex;
+    align-items: 100px center; 
+    gap: 35%; 
+}
+
+.nav-logo {
+    height: 70px;
+    width: auto;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.nav-logo:hover {
+    transform: scale(1.1);
+}
